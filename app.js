@@ -31,3 +31,7 @@ function game(player, computer) {
     return "player venceu";
   }
 }
+
+let playerPoints = 0;
+let computerPoints = 0;
+let gameOn = true;
