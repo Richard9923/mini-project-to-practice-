@@ -70,4 +70,6 @@ console.log(`Jogo iniciado. Pontos do Computer: ${computerPoints}.`);
 while (gameOn == true) {
   resultadoJogo = game(playerChoice(), computerChoice());
   analisandoAdicionandoResultado(resultadoJogo);
+  console.log(`Rodada finalizada. Pontos do Player: ${playerPoints}.`);
+  console.log(`Rodada finalizada. Pontos do Computer: ${computerPoints}.`);
 }
