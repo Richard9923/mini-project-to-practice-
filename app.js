@@ -32,6 +32,42 @@ function game(player, computer) {
   }
 }
 
+function analisandoAdicionandoResultado(resultado) {
+  if (resultado == "empate") {
+    playerPoints += 0;
+    computerPoints += 0;
+  } else if (resultado == "player venceu") {
+    playerPoints += 1;
+    console.log(
+      `Player ganhou mais um ponto. Pontuação total: ${playerPoints}.`
+    );
+    if (playerPoints == 3) {
+      console.log(
+        `Jogo finalizado. O Player venceu o jogo com ${playerPoints} pontos!`
+      );
+      gameOn = false;
+    }
+  } else {
+    computerPoints += 1;
+    console.log(
+      `Computer ganhou mais um ponto. Pontuação total: ${computerPoints}.`
+    );
+    if (computerPoints == 3) {
+      console.log(
+        `Jogo finalizado. O Computer venceu o jogo com ${computerPoints} pontos!`
+      );
+      gameOn = false;
+    }
+  }
+}
+
 let playerPoints = 0;
 let computerPoints = 0;
 let gameOn = true;
+console.log(`Jogo iniciado. Pontos do Player: ${playerPoints}.`);
+console.log(`Jogo iniciado. Pontos do Computer: ${computerPoints}.`);
+
+while (gameOn == true) {
+  resultadoJogo = game(playerChoice(), computerChoice());
+  analisandoAdicionandoResultado(resultadoJogo);
+}
