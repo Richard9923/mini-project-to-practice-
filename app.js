@@ -4,9 +4,9 @@ function playerChoice() {
 }
 
 function computerChoice() {
-  computerOptions = ["pedra", "papel", "tesoura"];
+  let computerOptions = ["pedra", "papel", "tesoura"];
   randomNumber = Math.floor(Math.random() * computerOptions.length);
-  console.log(randomNumber);
+  return computerOptions[randomNumber];
 }
 
 function game(player, computer) {
@@ -28,7 +28,7 @@ function game(player, computer) {
     console.log(
       `O Computador venceu. Computer: ${computer}. Player: ${player}.`
     );
-    return "player venceu";
+    return "computer venceu";
   }
 }
 
