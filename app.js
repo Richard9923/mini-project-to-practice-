@@ -46,6 +46,9 @@ function analisandoAdicionandoResultado(resultado) {
         `Jogo finalizado. O Player venceu o jogo com ${playerPoints} pontos!`
       );
       gameOn = false;
+    } else {
+      console.log(`Rodada finalizada. Pontos do Player: ${playerPoints}.`);
+      console.log(`Rodada finalizada. Pontos do Computer: ${computerPoints}.`);
     }
   } else {
     computerPoints += 1;
@@ -57,6 +60,9 @@ function analisandoAdicionandoResultado(resultado) {
         `Jogo finalizado. O Computer venceu o jogo com ${computerPoints} pontos!`
       );
       gameOn = false;
+    } else {
+      console.log(`Rodada finalizada. Pontos do Player: ${playerPoints}.`);
+      console.log(`Rodada finalizada. Pontos do Computer: ${computerPoints}.`);
     }
   }
 }
@@ -70,6 +76,4 @@ console.log(`Jogo iniciado. Pontos do Computer: ${computerPoints}.`);
 while (gameOn == true) {
   resultadoJogo = game(playerChoice(), computerChoice());
   analisandoAdicionandoResultado(resultadoJogo);
-  console.log(`Rodada finalizada. Pontos do Player: ${playerPoints}.`);
-  console.log(`Rodada finalizada. Pontos do Computer: ${computerPoints}.`);
 }
